@@ -267,6 +267,16 @@ student_2.rate_lecture(lecturer_1, 'Python', 8)
 student_2.rate_lecture(lecturer_2, 'Python', 7)
 student_2.rate_lecture(lecturer_2, 'Java', 10)
 
+# Демонстрация отказов при некорректном оценивании
+print(reviewer_1.rate_hw(lecturer_1, 'Python', 9)) # Попытка поставить оценку за ДЗ не студенту
+print()
+
+print(reviewer_1.rate_hw(student_2, 'Git', 8)) # Попытка поставить оценку за курс, который студент не изучает
+print()
+
+print(student_1.rate_lecture(lecturer_2, 'Git', 8)) # Попытка оценить лектора за курс, который он не ведет
+print()
+
 # Вывод информации об объектах
 
 print(student_1)
